@@ -8,9 +8,21 @@
 </head>
 <body>
 
-  <div class="container">
-
-  </div>
+  <main>
+    <section>
+      <form id="addContact">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+        <input type="text" placeholder="Phone #">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Twitter Handle">
+        <input type="submit" value="Add">
+      </form>
+    </section>
+    <section>
+      <ul id="contactList"></ul>
+    </section>
+  </main>
 
   <!-- VENDOR -->
   <script src="js/vendor/jquery.js"></script>
@@ -20,6 +32,8 @@
   <!-- TEMPLATES -->
   <script src="js/templates.js"></script>
   <!-- MAIN -->
+  <script src="js/models/contact.model.js"></script>
+  <script src="js/collections/rolodex.collection.js"></script>
   <script src="js/main.js"></script>
 
 </body>
