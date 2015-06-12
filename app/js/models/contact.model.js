@@ -4,16 +4,13 @@ var Contact = Backbone.Model.extend({
     console.log('New Contact!');
   },
 
-  getFullName: function(){
-    return this.get('firstName') + " " + this.get('lastName');
+  idAttribute: '_id',
+
+  defaults: {
+    fullName: '',
+    phoneNumber: '',
+    email: '',
+    handle: ''
   }
-
-  // defaults: {
-  //   getFullName: ,
-  //   phoneNum: '',
-  //   email: '',
-  //   handle: ''
-  // }
-
 
 });
