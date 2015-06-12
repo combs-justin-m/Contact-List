@@ -1,16 +1,14 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+@import "sidebar";
+@import "list";
+
 main {
-  width: 500px;
-  margin: 200px auto;
+  @include outer-container;
 }
 
-input {
-  display: block;
-}
+.navbar {
+  @include span-columns(4);
 
-.delete {
-  display: inline-block;
-  color: red;
-  font-size: 22px;
-  margin-left: 20px;
-  cursor: pointer;
 }
