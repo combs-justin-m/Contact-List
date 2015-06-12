@@ -30,35 +30,49 @@ var addContact = function(e){
     email: contactEmail
   });
 
-  console.log(c);
-
   return c;
 
 };
 
-var render = function(e) {
+var render = function(e){
+
+  allContacts.fetch().done(function(data){
+    $('#contactList').html(template.contact({data:data}));
+  });
+};
+
+var adder = function(e){
   e.preventDefault();
 
   var c = addContact();
 
   allContacts.add(c).save().success(function(){
-    console.log('success');
-
-    allContacts.fetch().done(function(data){
-      console.log(data);
-      $('#contactList').html(template.contact({data:data}));
-    });
+    render();
   });
 
   this.reset();
 };
 
-$('#addContact').on('submit', render);
+var deleter = function(){
+
+  var deleteID = $(this).parent().attr('id');
+  var m = allContacts.get(deleteID);
+
+  m.destroy().success(function(){
+    allContacts.fetch().done(function(data){
+      $('#contactList').html(template.contact({data:data}));
+    });
+  });
+};
 
 var initRender = function (){
   allContacts.fetch().done(function(data){
     $('#contactList').html(template.contact({data:data}));
   });
 };
+
+
+$('#contactList').on('click', 'p', deleter);
+$('#addContact').on('submit', adder);
 
 initRender();

@@ -6,3 +6,11 @@ main {
 input {
   display: block;
 }
+
+.delete {
+  display: inline-block;
+  color: red;
+  font-size: 22px;
+  margin-left: 20px;
+  cursor: pointer;
+}
