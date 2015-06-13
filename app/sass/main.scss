@@ -4,6 +4,10 @@
 @import "sidebar";
 @import "list";
 
+li {
+  list-style: none;
+}
+
 main {
   // @include outer-container;
 }

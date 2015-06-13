@@ -11,13 +11,16 @@ html {
   overflow: hidden;
   height: 0px; }
 
+#contactList p {
+  margin: 0; }
+
 .contactInfo {
   transition: all 0.3s ease;
   overflow: hidden;
   height: 0px; }
 
 .showContact {
-  min-height: 75px; }
+  min-height: 125px; }
 
 .showNav {
   height: 200px; }
@@ -25,12 +28,18 @@ html {
 input {
   display: block; }
 
+.categoryList {
+  text-transform: uppercase; }
+
 .delete {
   display: inline-block;
   color: red;
   font-size: 22px;
   margin-left: 20px;
   cursor: pointer; }
+
+li {
+  list-style: none; }
 
 .navbar {
   float: left;

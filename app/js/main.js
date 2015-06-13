@@ -39,9 +39,20 @@ var addContact = function(e){
 var render = function(e){
 
   allContacts.fetch().done(function(data){
+    data.sort(dataSort);
     $('#contactList').html(template.contact({data:data}));
   });
 };
+
+var dataSort = function(a, b){
+      var nameA = a.fullName.toLowerCase(),
+          nameB = b.fullName.toLowerCase();
+        if (nameA < nameB) {
+          return -1;
+        } else if (nameA > nameB) {
+          return 1;
+        } else return 0;
+      };
 
 var adder = function(e){
   e.preventDefault();
@@ -67,9 +78,12 @@ var deleter = function(){
 
 var initRender = function (){
   allContacts.fetch().done(function(data){
+    data.sort(dataSort);
     $('#contactList').html(template.contact({data:data}));
   });
 };
+
+///////////////////////////////////////
 
 $('.newBtn').on('click', function(){
   $('.addContact').toggleClass('showNav');
@@ -79,9 +93,9 @@ $('#contactList').on('click', 'li', function(){
   $(this).find($('.contactInfo')).toggleClass('showContact');
 });
 
-
-
 $('#contactList').on('click', 'p', deleter);
 $('#addContact').on('submit', adder);
 
 initRender();
+
+///////////////////////////////////////
