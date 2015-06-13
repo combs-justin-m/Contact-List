@@ -1,6 +1,26 @@
-main {
-  width: 500px;
-  margin: 200px auto; }
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+.addContact {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 0px; }
+
+.contactInfo {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 0px; }
+
+.showContact {
+  min-height: 75px; }
+
+.showNav {
+  height: 200px; }
 
 input {
   display: block; }
@@ -11,3 +31,21 @@ input {
   font-size: 22px;
   margin-left: 20px;
   cursor: pointer; }
+
+.navbar {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  height: 100vh;
+  border-right: 1px solid lightgray; }
+  .navbar:last-child {
+    margin-right: 0; }
+
+.allContacts {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .allContacts:last-child {
+    margin-right: 0; }

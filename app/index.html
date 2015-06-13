@@ -9,17 +9,38 @@
 <body>
 
   <main>
-    <section>
-      <form id="addContact">
+    <aside class="navbar">
+      <button class="newBtn">New +</button>
+
+      <form class="addContact" id="addContact">
         <input type="text" placeholder="First name" id="firstName">
         <input type="text" placeholder="Last name" id="lastName">
         <input type="tel" placeholder="Phone #" id="phoneNumber">
         <input type="text" placeholder="Email" id ="email">
         <input type="text" placeholder="Twitter Handle" id="handle">
+        <select name="Category">
+          <option value="" disabled selected>Select your option</option>
+          <option value="frontend">Front-End</option>
+          <option value="ruby">Ruby</option>
+          <option value="ios">iOS</option>
+          <option value="instructors">Instructors</option>
+        </select>
         <input type="submit" value="Add" id="addBtn">
       </form>
-    </section>
-    <section>
+
+      <ul>
+        <li>Contacts</li>
+      </ul>
+
+      <ul> Directory
+        <li>Front End</li>
+        <li>Ruby</li>
+        <li>IOS</li>
+        <li>Instructors</li>
+      </ul>
+
+    </aside>
+    <section class="allContacts">
       <ul id="contactList"></ul>
     </section>
   </main>

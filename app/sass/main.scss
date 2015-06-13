@@ -5,10 +5,15 @@
 @import "list";
 
 main {
-  @include outer-container;
+  // @include outer-container;
 }
 
 .navbar {
-  @include span-columns(4);
+  @include span-columns(2);
+  height: 100vh;
+  border-right: 1px solid lightgray;
+}
 
+.allContacts {
+  @include span-columns(10);
 }

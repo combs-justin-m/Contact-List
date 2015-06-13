@@ -2,11 +2,26 @@
   <li id="{{ _id }}">
 
     {{ fullName }}
-    {{ phoneNumber }}
-    {{ email }}
-    {{ handle }}
 
     <p class="delete" id="delete">X</p>
 
+
+    <ul class='contactInfo'>
+      <li>
+        Phone Number:
+        {{ phoneNumber }}
+      <li>
+        Email:
+        {{ email }}
+      </li>
+      <li>
+        Twitter Handle:
+        {{ handle }}
+      </li>
+      <li>
+        Category:
+        {{ category }}
+      </li>
+    </ul>
   </li>
 {{/each}}

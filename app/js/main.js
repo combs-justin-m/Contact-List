@@ -9,6 +9,7 @@ var addContact = function(e){
   var contactPhoneNumber = $('#phoneNumber').val();
   var contactHandle = $('#handle').val();
   var contactEmail = $('#email').val();
+  var contactCategory = $('select').prop('select', true).val();
 
   var getFullName = function(){
     return contactFirstName + " " + contactLastName;
@@ -27,7 +28,8 @@ var addContact = function(e){
     fullName: getFullName(),
     phoneNumber: contactPhoneNumber,
     handle: contactHandle,
-    email: contactEmail
+    email: contactEmail,
+    category: contactCategory
   });
 
   return c;
@@ -59,9 +61,7 @@ var deleter = function(){
   var m = allContacts.get(deleteID);
 
   m.destroy().success(function(){
-    allContacts.fetch().done(function(data){
-      $('#contactList').html(template.contact({data:data}));
-    });
+    render();
   });
 };
 
@@ -70,6 +70,15 @@ var initRender = function (){
     $('#contactList').html(template.contact({data:data}));
   });
 };
+
+$('.newBtn').on('click', function(){
+  $('.addContact').toggleClass('showNav');
+});
+
+$('#contactList').on('click', 'li', function(){
+  $(this).find($('.contactInfo')).toggleClass('showContact');
+});
+
 
 
 $('#contactList').on('click', 'p', deleter);

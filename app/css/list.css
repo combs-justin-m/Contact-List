@@ -1,32 +1,25 @@
-
 .addContact {
   transition: all 0.3s ease;
   overflow: hidden;
-  height: 0px
-}
+  height: 0px; }
 
 .contactInfo {
   transition: all 0.3s ease;
   overflow: hidden;
-  height: 0px
-}
+  height: 0px; }
 
 .showContact {
-  min-height: 75px;
-}
+  min-height: 75px; }
 
 .showNav {
-  height: 200px;
-}
+  height: 200px; }
 
 input {
-  display: block;
-}
+  display: block; }
 
 .delete {
   display: inline-block;
   color: red;
   font-size: 22px;
   margin-left: 20px;
-  cursor: pointer;
-}
+  cursor: pointer; }
