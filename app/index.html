@@ -4,6 +4,8 @@
   <title>Project Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/vendor/font-awesome.css">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -12,12 +14,49 @@
     <aside class="navbar">
       <button class="newBtn">New +</button>
 
-      <form class="addContact" id="addContact">
-        <input type="text" placeholder="First name" id="firstName">
+      <form class="addContact hideNav" id="addContact">
+
+        <div class="group">
+          <input type="text" id="firstName" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>First Name</label>
+        </div>
+
+        <div class="group">
+          <input type="text" id="lastName" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Last Name</label>
+        </div>
+
+        <div class="group">
+          <input type="text" id="phoneNumber" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Phone Number</label>
+        </div>
+
+        <div class="group">
+          <input type="text" id="email" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Email</label>
+        </div>
+
+        <div class="group">
+          <input type="text" id="handle" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Twitter Handle</label>
+        </div>
+<!--
+
         <input type="text" placeholder="Last name" id="lastName">
         <input type="tel" placeholder="Phone #" id="phoneNumber">
         <input type="text" placeholder="Email" id ="email">
-        <input type="text" placeholder="Twitter Handle" id="handle">
+        <input type="text" placeholder="Twitter Handle" id="handle"> -->
+
         <select name="Category">
           <option value="" disabled selected>Select Category</option>
           <option value="frontend">Front-End</option>
@@ -28,15 +67,15 @@
         <input type="submit" value="Add" id="addBtn">
       </form>
 
-      <ul>
-        <li>Contacts</li>
-      </ul>
+
+      <h2 id="contacts">Contacts</h2>
+
 
       <ul> Directory
-        <li>Front End</li>
-        <li>Ruby</li>
-        <li>IOS</li>
-        <li>Instructors</li>
+        <li id="frontend">Front End</li>
+        <li id="ruby">Ruby</li>
+        <li id="ios">IOS</li>
+        <li id="instructors">Instructors</li>
       </ul>
 
     </aside>

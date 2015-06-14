@@ -1,8 +1,11 @@
 
+/****************************
+List
+****************************/
+
 #contactList p {
   margin: 0;
 }
-
 
 .contactInfo {
   transition: all 0.3s ease;
@@ -12,14 +15,6 @@
 
 .showContact {
   min-height: 125px;
-}
-
-.showNav {
-  height: 200px;
-}
-
-input {
-  display: block;
 }
 
 .categoryList {

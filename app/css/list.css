@@ -1,3 +1,6 @@
+/****************************
+List
+****************************/
 #contactList p {
   margin: 0; }
 
@@ -8,12 +11,6 @@
 
 .showContact {
   min-height: 125px; }
-
-.showNav {
-  height: 200px; }
-
-input {
-  display: block; }
 
 .categoryList {
   text-transform: uppercase; }

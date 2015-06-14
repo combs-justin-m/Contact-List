@@ -36,13 +36,23 @@ var addContact = function(e){
 
 };
 
-var render = function(e){
+var render = function(filter){
 
   allContacts.fetch().done(function(data){
-    data.sort(dataSort);
-    $('#contactList').html(template.contact({data:data}));
+
+    var filteredData = data.sort(dataSort);
+
+    filteredData = _.filter(filteredData, function(m){
+      if (filter === undefined) {
+        return true;
+      } else {
+        return m.category === filter;
+    }
+    });
+    $('#contactList').html(template.contact({data:filteredData}));
   });
 };
+
 
 var dataSort = function(a, b){
       var nameA = a.fullName.toLowerCase(),
@@ -76,13 +86,6 @@ var deleter = function(){
   });
 };
 
-var initRender = function (){
-  allContacts.fetch().done(function(data){
-    data.sort(dataSort);
-    $('#contactList').html(template.contact({data:data}));
-  });
-};
-
 ///////////////////////////////////////
 
 $('.newBtn').on('click', function(){
@@ -93,9 +96,30 @@ $('#contactList').on('click', 'li', function(){
   $(this).find($('.contactInfo')).toggleClass('showContact');
 });
 
+$('#contacts').on('click', function(){
+  render();
+});
+
+$('#frontend').on('click', function(){
+  render('frontend');
+});
+
+$('#ruby').on('click', function(){
+  render('ruby');
+});
+
+$('#ios').on('click', function(){
+  render('ios');
+});
+
+$('#instructors').on('click', function(){
+  render('instructors');
+});
+
 $('#contactList').on('click', 'p', deleter);
+
 $('#addContact').on('submit', adder);
 
-initRender();
+render();
 
 ///////////////////////////////////////
