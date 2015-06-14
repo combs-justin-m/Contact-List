@@ -18,7 +18,9 @@ li {
 }
 
 .navbar {
+  position: fixed;
   @include span-columns(3);
+  margin-right: 0;
   overflow-y: hidden;
   height: 100vh;
   border-right: 1px solid lightgray;
@@ -27,4 +29,10 @@ li {
 
 .allContacts {
   @include span-columns(9);
+  float: right;
+  width: 76.9%;
+
+  // &:last-child {
+  //   margin-right: 2.35765%;
+  // }
 }

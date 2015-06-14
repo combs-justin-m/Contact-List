@@ -116,7 +116,7 @@ $('#instructors').on('click', function(){
   render('instructors');
 });
 
-$('#contactList').on('click', 'p', deleter);
+$('#contactList').on('click', 'span', deleter);
 
 $('#addContact').on('submit', adder);
 

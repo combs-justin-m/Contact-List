@@ -1,24 +1,21 @@
 {{#each data}}
-  <li id="{{ _id }}">
+  <li class="dataItem" id="{{ _id }}">
 
     {{ fullName }}
 
-    <p class="delete" id="delete">X</p>
+    <span class="delete" id="delete"><i class="fa fa-times"></i></span>
 
 
     <ul class='contactInfo'>
-        <p>Phone Number:</p>
       <li>
         {{ phoneNumber }}
-        <p>Email:</p>
+      </li>
       <li>
         {{ email }}
       </li>
-        <p>Twitter Handle:</p>
       <li>
         {{ handle }}
       </li>
-        <p>Category:</p>
       <li class="categoryList">
         {{ category }}
       </li>

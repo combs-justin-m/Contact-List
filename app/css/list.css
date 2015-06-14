@@ -1,22 +1,38 @@
 /****************************
 List
 ****************************/
-#contactList p {
-  margin: 0; }
+#contactList {
+  margin-top: 50px;
+  padding: 0; }
+
+.dataItem {
+  position: relative;
+  min-height: 50px;
+  border-bottom: 1px solid lightgray;
+  padding-left: 15px;
+  padding-top: 15px;
+  cursor: pointer; }
+  .dataItem:hover .delete {
+    visibility: visible; }
 
 .contactInfo {
   transition: all 0.3s ease;
   overflow: hidden;
   height: 0px; }
+  .contactInfo li {
+    padding: 10px 0; }
 
 .showContact {
-  min-height: 125px; }
+  min-height: 170px; }
 
 .categoryList {
   text-transform: uppercase; }
 
 .delete {
-  display: inline-block;
+  position: absolute;
+  visibility: hidden;
+  right: 10px;
+  top: 12px;
   color: red;
   font-size: 22px;
   margin-left: 20px;
