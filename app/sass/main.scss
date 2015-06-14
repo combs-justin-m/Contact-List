@@ -3,14 +3,14 @@
 
 @import "sidebar";
 @import "list";
-@import "buttons";
-
-* {
-  box-sizing: border-box;
-}
 
 body {
   font-family: 'Roboto', sans-serif;
+  color: $black;
+}
+
+main {
+  overflow: auto;
 }
 
 li {
@@ -19,7 +19,7 @@ li {
 
 .navbar {
   @include span-columns(3);
-  overflow-x: hidden;
+  overflow-y: hidden;
   height: 100vh;
   border-right: 1px solid lightgray;
   box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.2);

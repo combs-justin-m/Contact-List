@@ -1,59 +1,90 @@
+/****************************
+Variables
+****************************/
+$lightshadow: 0 4px 17px 0 rgba(0, 0, 0, 0.2);
+$darkshadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
 
-
-select {
-    font-size: 18px;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    background: none;
-    border: none;
-
-    ~ .bar {
-      border-bottom: 1px solid #999;
-      &:after,&:before {
-        bottom: -1px;
-      }
-    }
-    ~ label {
-      font-size: 14px;
-      color: #5264AE;
-      top: -20px;
-    }
-    &:focus {
-      outline: none;
-      ~ .bar {
-        &:before, &:after {
-          width: 50%;
-        }
-      }
-    }
-  }
-
+$tan: #F5F5F5;
+$blue: #1DAAF1;
+$white: #fff;
+$black: #4D4D4D;
+$gray: #777777;
+$lightgray: #CFCFCF;
 
 /****************************
 NavBar
 ****************************/
 
 .newBtn {
-  position: absolute;
+  color: $white;
+  background-color: $blue;
+  height: 50px;
+  width: 100%;
+  border: none;
+  box-shadow: $lightshadow;
+
+  &:focus {
+    outline: none;
+    color: $white;
+    background-color: $blue;
+    box-shadow: $darkshadow;
+  }
 }
 
 .addContact {
   transition: all 0.3s ease;
   overflow: hidden;
   height: 0px;
-  box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: $darkshadow;
 }
 
 .showNav {
   transition: all 0.3s ease;
-  padding-top: 60px;
-  height: 800px;
+  padding-top: 30px;
+  height: 520px;
+}
+
+#contacts {
+  color: $blue;
+  margin: 30px 15px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.directoryTitle {
+ margin-left: 15px;
+}
+
+.directory {
+
+  li {
+    color: $blue;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .group {
   position: relative;
   margin-bottom: 30px;
+}
+
+.groupLast {
+  margin-bottom: 1px;
+}
+
+#addBtn {
+  color: $white;
+  background-color: $blue;
+  height: 50px;
+  width: 100%;
+  border: none;
 }
 
 input {
@@ -88,7 +119,7 @@ label {
 input:focus ~ label, input:valid ~ label {
   top: -20px;
   font-size: 14px;
-  color: #5264AE;
+  color: $blue;
 }
 
 .bar {
@@ -103,7 +134,7 @@ input:focus ~ label, input:valid ~ label {
   width:0;
   bottom:1px;
   position:absolute;
-  background:#5264AE;
+  background:$blue;
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
@@ -119,31 +150,32 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
 }
 
-.highlight {
-  position:absolute;
-  height:60%;
-  width:100px;
-  top:25%;
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
-}
+select {
+    font-size: 18px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
 
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
-}
+    ~ .bar {
+      border-bottom: 1px solid #999;
+      &:after,&:before {
+        bottom: -1px;
+      }
+    }
+    ~ label {
+      font-size: 14px;
+      color: $blue;
+      top: -20px;
+    }
+    &:focus {
+      outline: none;
+      ~ .bar {
+        &:before, &:after {
+          width: 50%;
+        }
+      }
+    }
+  }
 
-@-webkit-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
-}
-@-moz-keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
-}
-@keyframes inputHighlighter {
-  from { background:#5264AE; }
-  to  { width:0; background:transparent; }
-}

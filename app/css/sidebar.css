@@ -1,43 +1,62 @@
-select {
-  font-size: 18px;
-  width: 100%;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  background: none;
-  border: none; }
-  select ~ .bar {
-    border-bottom: 1px solid #999; }
-    select ~ .bar:after, select ~ .bar:before {
-      bottom: -1px; }
-  select ~ label {
-    font-size: 14px;
-    color: #5264AE;
-    top: -20px; }
-  select:focus {
-    outline: none; }
-    select:focus ~ .bar:before, select:focus ~ .bar:after {
-      width: 50%; }
-
+/****************************
+Variables
+****************************/
 /****************************
 NavBar
 ****************************/
 .newBtn {
-  position: absolute; }
+  color: #fff;
+  background-color: #1DAAF1;
+  height: 50px;
+  width: 100%;
+  border: none;
+  box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.2); }
+  .newBtn:focus {
+    outline: none;
+    color: #fff;
+    background-color: #1DAAF1;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
 
 .addContact {
   transition: all 0.3s ease;
   overflow: hidden;
   height: 0px;
-  box-shadow: 0 0px 17px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
 
 .showNav {
   transition: all 0.3s ease;
-  padding-top: 60px;
-  height: 800px; }
+  padding-top: 30px;
+  height: 520px; }
+
+#contacts {
+  color: #1DAAF1;
+  margin: 30px 15px;
+  cursor: pointer; }
+  #contacts:hover {
+    text-decoration: underline; }
+
+.directoryTitle {
+  margin-left: 15px; }
+
+.directory li {
+  color: #1DAAF1;
+  cursor: pointer; }
+  .directory li:hover {
+    text-decoration: underline; }
 
 .group {
   position: relative;
   margin-bottom: 30px; }
+
+.groupLast {
+  margin-bottom: 1px; }
+
+#addBtn {
+  color: #fff;
+  background-color: #1DAAF1;
+  height: 50px;
+  width: 100%;
+  border: none; }
 
 input {
   font-size: 18px;
@@ -64,7 +83,7 @@ label {
 input:focus ~ label, input:valid ~ label {
   top: -20px;
   font-size: 14px;
-  color: #5264AE; }
+  color: #1DAAF1; }
 
 .bar {
   position: relative;
@@ -77,7 +96,7 @@ input:focus ~ label, input:valid ~ label {
   width: 0;
   bottom: 1px;
   position: absolute;
-  background: #5264AE;
+  background: #1DAAF1;
   transition: 0.2s ease all;
   -moz-transition: 0.2s ease all;
   -webkit-transition: 0.2s ease all; }
@@ -91,37 +110,22 @@ input:focus ~ label, input:valid ~ label {
 input:focus ~ .bar:before, input:focus ~ .bar:after {
   width: 50%; }
 
-.highlight {
-  position: absolute;
-  height: 60%;
-  width: 100px;
-  top: 25%;
-  left: 0;
-  pointer-events: none;
-  opacity: 0.5; }
-
-input:focus ~ .highlight {
-  -webkit-animation: inputHighlighter 0.3s ease;
-  -moz-animation: inputHighlighter 0.3s ease;
-  animation: inputHighlighter 0.3s ease; }
-
-@-webkit-keyframes inputHighlighter {
-  from {
-    background: #5264AE; }
-  to {
-    width: 0;
-    background: transparent; } }
-
-@-moz-keyframes inputHighlighter {
-  from {
-    background: #5264AE; }
-  to {
-    width: 0;
-    background: transparent; } }
-
-@keyframes inputHighlighter {
-  from {
-    background: #5264AE; }
-  to {
-    width: 0;
-    background: transparent; } }
+select {
+  font-size: 18px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background: none;
+  border: none; }
+  select ~ .bar {
+    border-bottom: 1px solid #999; }
+    select ~ .bar:after, select ~ .bar:before {
+      bottom: -1px; }
+  select ~ label {
+    font-size: 14px;
+    color: #1DAAF1;
+    top: -20px; }
+  select:focus {
+    outline: none; }
+    select:focus ~ .bar:before, select:focus ~ .bar:after {
+      width: 50%; }
