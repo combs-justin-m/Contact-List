@@ -1,3 +1,23 @@
+select {
+  font-size: 18px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  background: none;
+  border: none; }
+  select ~ .bar {
+    border-bottom: 1px solid #999; }
+    select ~ .bar:after, select ~ .bar:before {
+      bottom: -1px; }
+  select ~ label {
+    font-size: 14px;
+    color: #5264AE;
+    top: -20px; }
+  select:focus {
+    outline: none; }
+    select:focus ~ .bar:before, select:focus ~ .bar:after {
+      width: 50%; }
+
 /****************************
 NavBar
 ****************************/
@@ -13,7 +33,7 @@ NavBar
 .showNav {
   transition: all 0.3s ease;
   padding-top: 60px;
-  height: 60%; }
+  height: 800px; }
 
 .group {
   position: relative;

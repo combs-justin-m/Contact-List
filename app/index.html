@@ -12,6 +12,14 @@
 
   <main>
     <aside class="navbar">
+
+
+      <div class="icon-button">
+        <core-icon icon="more-vert"></core-icon>
+        <paper-ripple class="circle recenteringTouch" fit></paper-ripple>
+      </div>
+
+
       <button class="newBtn">New +</button>
 
       <form class="addContact hideNav" id="addContact">
@@ -50,20 +58,18 @@
           <span class="bar"></span>
           <label>Twitter Handle</label>
         </div>
-<!--
 
-        <input type="text" placeholder="Last name" id="lastName">
-        <input type="tel" placeholder="Phone #" id="phoneNumber">
-        <input type="text" placeholder="Email" id ="email">
-        <input type="text" placeholder="Twitter Handle" id="handle"> -->
-
-        <select name="Category">
-          <option value="" disabled selected>Select Category</option>
-          <option value="frontend">Front-End</option>
-          <option value="ruby">Ruby</option>
-          <option value="ios">iOS</option>
-          <option value="instructors">Instructors</option>
-        </select>
+        <div class="group">
+          <select id="select">
+            <option value="" disabled selected>Select Category</option>
+            <option value="frontend">Front-End</option>
+            <option value="ruby">Ruby</option>
+            <option value="ios">iOS</option>
+            <option value="instructors">Instructors</option>
+          </select>
+          <label for="select">Selectbox</label>
+          <i class="bar"></i>
+        </div>
         <input type="submit" value="Add" id="addBtn">
       </form>
 
