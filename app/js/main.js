@@ -76,7 +76,8 @@ var adder = function(e){
   this.reset();
 };
 
-var deleter = function(){
+var deleter = function(e){
+  e.stopPropagation();
 
   var deleteID = $(this).parent().attr('id');
   var m = allContacts.get(deleteID);

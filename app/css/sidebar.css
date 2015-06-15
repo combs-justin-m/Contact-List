@@ -80,7 +80,7 @@ input {
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #757575; }
+  border-bottom: 1px solid lightgray; }
   input:focus {
     outline: none; }
 
@@ -134,7 +134,7 @@ select {
   background: none;
   border: none; }
   select ~ .bar {
-    border-bottom: 1px solid #999; }
+    border-bottom: 1px solid lightgray; }
     select ~ .bar:after, select ~ .bar:before {
       bottom: -1px; }
   select ~ label {

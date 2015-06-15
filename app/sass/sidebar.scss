@@ -112,7 +112,7 @@ input {
   display: block;
   width: 100%;
   border: none;
-  border-bottom: 1px solid #757575;
+  border-bottom: 1px solid lightgray;
 
   &:focus {
     outline: none;
@@ -178,7 +178,7 @@ select {
     border: none;
 
     ~ .bar {
-      border-bottom: 1px solid #999;
+      border-bottom: 1px solid lightgray;
       &:after,&:before {
         bottom: -1px;
       }
