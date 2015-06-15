@@ -5,6 +5,7 @@ $lightshadow: 0 4px 17px 0 rgba(0, 0, 0, 0.2);
 $darkshadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
 
 $tan: #F5F5F5;
+$green: #8CC65B;
 $blue: #1DAAF1;
 $white: #fff;
 $black: #4D4D4D;
@@ -15,19 +16,38 @@ $lightgray: #CFCFCF;
 NavBar
 ****************************/
 
-.newBtn {
-  color: $white;
-  background-color: $blue;
-  height: 50px;
+header {
+  height: 80px;
   width: 100%;
-  border: none;
+  background-color: $blue;
+  text-align: center;
   box-shadow: $lightshadow;
+
+  h2 {
+    color: $white;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 25px;
+  }
+}
+
+.newBtn {
+  position: absolute;
+  z-index: 10;
+  top: 55px;
+  left: 10px;
+  color: $white;
+  background-color: $green;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  font-size: 26px;
+  box-shadow: $darkshadow;
 
   &:focus {
     outline: none;
-    color: $white;
-    background-color: $blue;
-    box-shadow: $darkshadow;
   }
 }
 
@@ -40,14 +60,14 @@ NavBar
 
 .showNav {
   transition: all 0.3s ease;
-  padding-top: 30px;
-  height: 520px;
+  padding-top: 50px;
+  height: 540px;
 }
 
 #contacts {
   color: $blue;
   font-size: 16px;
-  margin: 30px 15px;
+  margin: 50px 15px 30px;
   cursor: pointer;
 
   &:hover {

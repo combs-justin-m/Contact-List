@@ -4,6 +4,18 @@
 @import "sidebar";
 @import "list";
 
+.fa {
+  margin-right: 10px;
+}
+
+.fa-plus {
+  margin-right: 0;
+}
+
+.fa-trash {
+  margin-right: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: $black;

@@ -12,18 +12,34 @@ Variables
 /****************************
 NavBar
 ****************************/
-.newBtn {
-  color: #fff;
-  background-color: #1DAAF1;
-  height: 50px;
+header {
+  height: 80px;
   width: 100%;
-  border: none;
+  background-color: #1DAAF1;
+  text-align: center;
   box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.2); }
-  .newBtn:focus {
-    outline: none;
+  header h2 {
     color: #fff;
-    background-color: #1DAAF1;
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    padding-top: 25px; }
+
+.newBtn {
+  position: absolute;
+  z-index: 10;
+  top: 55px;
+  left: 10px;
+  color: #fff;
+  background-color: #8CC65B;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  font-size: 26px;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
+  .newBtn:focus {
+    outline: none; }
 
 .addContact {
   transition: all 0.3s ease;
@@ -33,13 +49,13 @@ NavBar
 
 .showNav {
   transition: all 0.3s ease;
-  padding-top: 30px;
-  height: 520px; }
+  padding-top: 50px;
+  height: 540px; }
 
 #contacts {
   color: #1DAAF1;
   font-size: 16px;
-  margin: 30px 15px;
+  margin: 50px 15px 30px;
   cursor: pointer; }
   #contacts:hover {
     text-decoration: underline; }
@@ -147,10 +163,11 @@ List
 
 .dataItem {
   position: relative;
-  min-height: 50px;
+  min-height: 65px;
   border-bottom: 1px solid lightgray;
   padding-left: 15px;
-  padding-top: 15px;
+  padding-top: 22px;
+  font-size: 18px;
   cursor: pointer; }
   .dataItem:hover .delete {
     visibility: visible; }
@@ -160,7 +177,9 @@ List
   overflow: hidden;
   height: 0px; }
   .contactInfo li {
-    padding: 10px 0; }
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 300; }
 
 .showContact {
   min-height: 170px; }
@@ -169,14 +188,26 @@ List
   text-transform: uppercase; }
 
 .delete {
+  color: #CFCFCF;
   position: absolute;
   visibility: hidden;
-  right: 10px;
-  top: 12px;
-  color: red;
-  font-size: 22px;
-  margin-left: 20px;
-  cursor: pointer; }
+  right: 25px;
+  top: 15px;
+  margin-left: 22px;
+  border: none;
+  font-size: 28px; }
+  .delete:hover {
+    color: #D9453C;
+    cursor: pointer; }
+
+.fa {
+  margin-right: 10px; }
+
+.fa-plus {
+  margin-right: 0; }
+
+.fa-trash {
+  margin-right: 0; }
 
 body {
   font-family: 'Roboto', sans-serif;
