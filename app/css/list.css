@@ -41,5 +41,5 @@ List
   border: none;
   font-size: 28px; }
   .delete:hover {
-    color: #D9453C;
+    color: tomato;
     cursor: pointer; }

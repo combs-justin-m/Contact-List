@@ -1,6 +1,6 @@
 {{#each data}}
   <li class="dataItem" id="{{ _id }}">
-
+    <i class="fa fa-user"></i>
     {{ fullName }}
 
     <span class="delete" id="delete"><i class="fa fa-trash"></i></i></span>
@@ -13,11 +13,11 @@
       </li>
       <li>
         <i class="fa fa-envelope-o"></i>
-        {{ email }}
+        <a href="mailto:{{ email }}" target="_top">{{ email }}</a>
       </li>
       <li>
         <i class="fa fa-twitter"></i>
-        {{ handle }}
+        <a href="https://twitter.com/{{ handle }}" target="_blank">@{{ handle }}</a>
       </li>
       <li class="categoryList">
         <i class="fa fa-tag"></i>
